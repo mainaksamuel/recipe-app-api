@@ -50,7 +50,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
         return self.queryset.filter(user=self.request.user)
 
     def perform_create(self, serializer):
-        """Create a new object"""
+        """Create a new recipe"""
         serializer.save(user=self.request.user)
 
     def get_serializer_class(self):
